@@ -10,7 +10,7 @@ flask==3.0.3
 python-telegram-bot[job-queue]==21.11.1
 
 # Downloaders
-yt-dlp>=2026.4.30
+yt-dlp>=2026.6.1
 gallery-dl>=1.29.0
 
 # Media & Crypto
