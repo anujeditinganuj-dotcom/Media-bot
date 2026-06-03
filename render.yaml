@@ -29,6 +29,6 @@ services:
         value: "https://t.me/log_ak_bots"
 
       - key: PORT
-        value: "10000"       # Render free tier ke liye 10000 use karo
+        value: "5000"       # Render free tier ke liye 10000 use karo
 
     healthCheckPath: /
