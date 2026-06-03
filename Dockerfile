@@ -1,26 +1,34 @@
-FROM python:3.11-slim
+# Node.js 20 base (Python ke saath) - yt-dlp JS runtime ke liye Node 18+ chahiye
+FROM node:20-slim
 
-# System dependencies + Node.js (YouTube JS runtime ke liye)
+# Python install karo
 RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
+    python3-venv \
     ffmpeg \
     curl \
     git \
-    nodejs \
-    npm \
     && rm -rf /var/lib/apt/lists/*
+
+# pip ko python3 se link karo
+RUN ln -sf /usr/bin/python3 /usr/bin/python && \
+    ln -sf /usr/bin/pip3 /usr/bin/pip
 
 WORKDIR /app
 
-# Install all dependencies
+# Python dependencies install karo
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --break-system-packages -r requirements.txt
 
-# Override yt-dlp with latest from GitHub
-RUN pip install --no-cache-dir --force-reinstall \
-    "https://github.com/yt-dlp/yt-dlp/archive/refs/heads/master.zip#egg=yt-dlp" \
-    && yt-dlp --version
+# yt-dlp latest GitHub se (PyPI version issue bypass)
+RUN pip install --no-cache-dir --break-system-packages --force-reinstall \
+    "https://github.com/yt-dlp/yt-dlp/archive/refs/heads/master.zip#egg=yt-dlp"
 
-# Copy bot code
+# Verify versions
+RUN node --version && yt-dlp --version
+
+# Bot code copy karo
 COPY . .
 
 ENV PORT=10000
