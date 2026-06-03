@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: Downloader-Bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt && yt-dlp -U
+    startCommand: python bot.py
+    plan: free
+
+    envVars:
+      - key: BOT_TOKEN
+        sync: false          # Set manually in Render dashboard
+
+      - key: BOT_USERNAME
+        sync: false          # e.g. MyDownloaderBot (without @)
+
+      - key: WEBHOOK_URL
+        sync: false          # e.g. https://downloader-bot.onrender.com
+
+      - key: ADMIN_USER_ID
+        sync: false          # Your Telegram numeric user ID
+
+      - key: REQUIRED_CHANNEL_USERNAME
+        value: "@log_ak_bots"
+
+      - key: REQUIRED_CHANNEL_URL
+        value: "https://t.me/log_ak_bots"
+
+      - key: PORT
+        value: "10000"       # Render free tier ke liye 10000 use karo
+
+    healthCheckPath: /
