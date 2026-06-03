@@ -1,32 +1,29 @@
-FROM python:3.11.9-slim
+FROM python:3.11-slim
 
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
-
-# System dependencies
+# System dependencies + Node.js (YouTube JS runtime ke liye)
 RUN apt-get update && apt-get install -y \
     ffmpeg \
     curl \
-    wget \
+    git \
     nodejs \
     npm \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
-# Install Python dependencies first (cache optimization)
+# Install all dependencies
 COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN pip install --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt && \
-    yt-dlp -U
+# Override yt-dlp with latest from GitHub
+RUN pip install --no-cache-dir --force-reinstall \
+    "https://github.com/yt-dlp/yt-dlp/archive/refs/heads/master.zip#egg=yt-dlp" \
+    && yt-dlp --version
 
-# Copy project
+# Copy bot code
 COPY . .
 
-# Render uses PORT env variable
-ENV PORT=5000
-
-EXPOSE 5000
+ENV PORT=10000
+EXPOSE 10000
 
 CMD ["python", "bot.py"]
