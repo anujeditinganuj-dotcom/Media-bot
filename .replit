@@ -1,7 +1,0 @@
-run = "python bot.py"
-
-[nix]
-channel = "stable-24_05"
-
-[deployment]
-run = ["sh", "-c", "pip install --force-reinstall --no-cache-dir yt-dlp && python bot.py"]
