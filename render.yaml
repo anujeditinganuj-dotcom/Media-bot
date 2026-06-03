@@ -2,8 +2,7 @@ services:
   - type: web
     name: Downloader-Bot
     runtime: python
-    buildCommand: |
-      curl -fsSL https://deb.nodesource.com/setup_20.x | bash - &&
+    buildCommand: >
       apt-get install -y nodejs &&
       pip install -r requirements.txt &&
       yt-dlp -U
@@ -30,6 +29,6 @@ services:
         value: "https://t.me/log_ak_bots"
 
       - key: PORT
-        value: "10000"
+        value: "10000"       # Render free tier ke liye 10000 use karo
 
     healthCheckPath: /
