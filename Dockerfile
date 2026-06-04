@@ -36,7 +36,7 @@ RUN node --version && deno --version && yt-dlp --version
 # Bot code
 COPY . .
 
-ENV PORT=10000
-EXPOSE 10000
+ENV PORT=5000
+EXPOSE 5000
 
 CMD ["python", "bot.py"]
