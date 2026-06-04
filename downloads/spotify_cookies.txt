@@ -1,0 +1,20 @@
+# Netscape HTTP Cookie File
+# https://curl.haxx.se/rfc/cookie_spec.html
+# This is a generated file! Do not edit.
+
+.spotify.com TRUE / TRUE 1812134569 sp_t b1bef0e4-0b28-4de2-b3be-08a6ff4d9976
+.spotify.com TRUE / TRUE 1780684871 sp_new 1
+.spotify.com TRUE / TRUE 1780684871 sp_landing https%3A%2F%2Fopen.spotify.com%2F
+.spotify.com TRUE / TRUE 1780684871 sp_landingref https%3A%2F%2Fwww.google.com%2F
+.spotify.com TRUE / TRUE 1780600274 _cs_mk_ga 0.23444254713896306_1780598474975
+.spotify.com TRUE / TRUE 1780684875 sp_m in-en
+.spotify.com TRUE / FALSE 1780684973 _gid GA1.2.1089755990.1780598475
+.spotify.com TRUE / FALSE 1812134477 OptanonAlertBoxClosed 2026-06-04T18:41:17.784Z
+.spotify.com TRUE / TRUE 1812134569 sp_dc AQC0lGeWZriMClvi9uFgvABU0BMkNKpqVW6oP3Ay6R20v7uSWFZ4DSq5d6f3fWnVA_kOvIGBfhaXqVLKg2YSJDUzXJ7d1QI_nGl3dSXuzaDu1FmfZpucKmeMFz42ndTGtnRgMpfZM6mwY72FMg_Vo1sgfWjVRzW_uQmfXNLnHLaJRap7NNa_jV7rWz6fajIxMnJVJjxDK_rqWmXd_GM
+.spotify.com TRUE / TRUE 1812134569 sp_key 2ca47094-b103-4733-b4ae-a017554a6546
+.spotify.com TRUE / TRUE 1785782569 sp_gaid 0088fc44e401f89cf0dee7253820bef488fff795c9e57c91a66aa4
+.spotify.com TRUE / FALSE 1812134573 OptanonConsent isGpcEnabled=0&datestamp=Fri+Jun+05+2026+00%3A12%3A53+GMT%2B0530+(India+Standard+Time)&version=202601.2.0&browserGpcFlag=0&isIABGlobal=false&hosts=&landingPath=NotLandingPage&groups=s00%3A1%2Cf00%3A1%2Cm00%3A1%2Ct00%3A1%2Ci00%3A1%2Cf11%3A1%2Cm02%3A1%2Ct02%3A1%2Cm03%3A1%2CID01%3A1&geolocation=IN%3BUP&AwaitingReconsent=false
+.spotify.com TRUE / FALSE 1815158573 _ga_ZWG1NSHWD8 GS2.1.s1780598475$o1$g1$t1780598573$j60$l0$h0
+.spotify.com TRUE / FALSE 1815158574 _ga GA1.2.705346919.1780598475
+.spotify.com TRUE / FALSE 1780598633 _gat_UA-5784146-31 1
+.spotify.com TRUE / FALSE 1815158574 _ga_BMC5VGR8YS GS2.2.s1780598476$o1$g1$t1780598574$j59$l0$h0
