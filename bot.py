@@ -63,8 +63,8 @@ from telegram.request import HTTPXRequest
 # =========================
 # Settings (from environment variables)
 # =========================
-BOT_TOKEN        = os.environ.get("BOT_TOKEN", "8741784728:AAFLpwz7UZvEUumoxgO2I7ii8Lo-9ZSpa1o")
-BOT_USERNAME     = os.environ.get("BOT_USERNAME", "terabox_video_down_bot")
+BOT_TOKEN        = os.environ.get("BOT_TOKEN", "8015464564:AAFe6QCyYpfSWPGbwih_u_XejaDLcho1KOI")
+BOT_USERNAME     = os.environ.get("BOT_USERNAME", "unzip_anuj_bot")
 
 # Pyrogram MTProto credentials — my.telegram.org se lein
 # Agar set nahi hain to Pyrogram upload disable rahega (Bot API fallback)
