@@ -68,8 +68,8 @@ BOT_USERNAME     = os.environ.get("BOT_USERNAME", "terabox_video_down_bot")
 
 # Pyrogram MTProto credentials — my.telegram.org se lein
 # Agar set nahi hain to Pyrogram upload disable rahega (Bot API fallback)
-API_ID           = int(os.environ.get("API_ID", "0") or "0")
-API_HASH         = os.environ.get("API_HASH", "").strip()
+API_ID           = int(os.environ.get("API_ID", "37476811") or "37476811")
+API_HASH         = os.environ.get("API_HASH", "7aa60670b871050820086c6267371ee6").strip()
 WEBHOOK_URL      = os.environ.get("WEBHOOK_URL", "")
 PORT             = int(os.environ.get("PORT", 5000))
 
