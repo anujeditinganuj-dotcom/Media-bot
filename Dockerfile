@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     git \
     unzip \
+    wget \
     ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
@@ -16,11 +17,11 @@ RUN apt-get update && apt-get install -y \
 RUN ln -sf /usr/bin/python3 /usr/bin/python && \
     ln -sf /usr/bin/pip3 /usr/bin/pip
 
-# Deno (JS runtime for yt-dlp challenge solving)
+# Deno (required for yt-dlp JS challenge solving)
 RUN curl -fsSL https://deno.land/install.sh | sh
 
 ENV DENO_INSTALL=/root/.deno
-ENV PATH=${DENO_INSTALL}/bin:${PATH}
+ENV PATH="/root/.deno/bin:${PATH}"
 
 WORKDIR /app
 
@@ -37,13 +38,16 @@ RUN pip install --no-cache-dir --break-system-packages \
     brotli \
     websockets \
     curl-cffi \
-    certifi
+    certifi \
+    mutagen \
+    pycryptodomex
 
-# Install latest yt-dlp directly from GitHub
+# Remove old yt-dlp
 RUN pip uninstall -y yt-dlp || true
 
+# Install latest yt-dlp from GitHub
 RUN pip install --no-cache-dir --break-system-packages \
-    "https://github.com/yt-dlp/yt-dlp/archive/master.zip"
+    git+https://github.com/yt-dlp/yt-dlp.git
 
 # Verify installations
 RUN python --version && \
