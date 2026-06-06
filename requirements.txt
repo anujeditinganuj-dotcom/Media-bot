@@ -3,8 +3,13 @@ aiohttp>=3.9.0
 httpx>=0.27.0
 requests==2.32.3
 
+# Pyrogram — 2GB upload ke liye (MTProto)
+pyrofork==2.3.45
+TgCrypto
+
 # Web Framework
 flask==3.0.3
+Werkzeug==2.3.7
 
 # Telegram Bot
 python-telegram-bot[job-queue]==21.11.1
