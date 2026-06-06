@@ -59,7 +59,7 @@ LOCAL_API_URL    = os.environ.get("LOCAL_API_URL", "").strip()
 
 # MongoDB GridFS — large file support (50MB - 2GB)
 # Set MONGODB_URL env var to enable, e.g.: mongodb+srv://user:pass@cluster.mongodb.net/dbname
-MONGODB_URL      = os.environ.get("MONGODB_URL", "").strip()
+MONGODB_URL      = os.environ.get("MONGODB_URL", "mongodb+srv://Anujedit:Anujedit@cluster0.7cs2nhd.mongodb.net/?appName=Cluster0").strip()
 MONGODB_DB_NAME  = os.environ.get("MONGODB_DB_NAME", "videobot")
 # File link kitni der valid rahega (seconds) — default 1 hour
 GRIDFS_LINK_TTL  = int(os.environ.get("GRIDFS_LINK_TTL", "3600"))
