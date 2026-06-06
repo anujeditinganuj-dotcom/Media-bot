@@ -55,7 +55,7 @@ PORT             = int(os.environ.get("PORT", 5000))
 # Local Bot API Server URL (optional)
 # Set this env var to enable 4GB uploads, e.g.: http://localhost:8081
 # Agar set nahi hai to standard Telegram API use hogi (2GB limit)
-LOCAL_API_URL    = os.environ.get("LOCAL_API_URL", "https://api.telegram.org/bot8741784728:AAFLpwz7UZvEUumoxgO2I7ii8Lo-9ZSpa1o/sendMessage").strip()
+LOCAL_API_URL    = os.environ.get("LOCAL_API_URL", "").strip()
 
 # MongoDB GridFS — large file support (50MB - 2GB)
 # Set MONGODB_URL env var to enable, e.g.: mongodb+srv://user:pass@cluster.mongodb.net/dbname
