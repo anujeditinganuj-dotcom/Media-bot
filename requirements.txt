@@ -10,13 +10,17 @@ flask==3.0.3
 python-telegram-bot[job-queue]==21.11.1
 
 # Downloaders
-# yt-dlp is installed via Dockerfile from GitHub (do not add here)
 gallery-dl>=1.29.0
 
 # Media & Crypto
 mutagen
 pycryptodomex
 brotli
+
+# yt-dlp support deps
+websockets
+curl-cffi
+certifi
 
 # Environment
 python-dotenv==1.0.1
