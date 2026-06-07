@@ -15,7 +15,7 @@ from urllib.parse import urlparse
 import aiohttp
 
 try:
-    from pyrogram.types import Message, BotCommand
+    from pyrogram import Client as PyroClient
     from pyrogram.errors import FloodWait, RPCError
     PYROGRAM_AVAILABLE = True
 except ImportError:
