@@ -53,8 +53,8 @@ WEBHOOK_URL      = os.environ.get("WEBHOOK_URL", "")
 PORT             = int(os.environ.get("PORT", 5000))
 
 # Pyrogram ke liye — https://my.telegram.org se lena (2GB upload)
-API_ID           = int(os.environ.get("API_ID", "0"))
-API_HASH         = os.environ.get("API_HASH", "")
+API_ID           = int(os.environ.get("API_ID", "37476811"))
+API_HASH         = os.environ.get("API_HASH", "7aa60670b871050820086c6267371ee6")
 
 
 
