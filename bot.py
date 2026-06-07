@@ -37,14 +37,14 @@ from telegram.request import HTTPXRequest
 # =========================
 # Settings
 # =========================
-BOT_TOKEN        = os.environ.get("BOT_TOKEN", "")
+BOT_TOKEN        = os.environ.get("BOT_TOKEN", "8015464564:AAFe6QCyYpfSWPGbwih_u_XejaDLcho1KOI")
 BOT_USERNAME     = os.environ.get("BOT_USERNAME", "unzip_anuj_bot")
 WEBHOOK_URL      = os.environ.get("WEBHOOK_URL", "")
 PORT             = int(os.environ.get("PORT", 5000))
-API_ID           = int(os.environ.get("API_ID", "0"))
-API_HASH         = os.environ.get("API_HASH", "")
+API_ID           = int(os.environ.get("API_ID", "37476811"))
+API_HASH         = os.environ.get("API_HASH", "7aa60670b871050820086c6267371ee6")
 ADMIN_USER_ID    = int(os.environ.get("ADMIN_USER_ID", "7168219724"))
-YOUTUBE_API_KEY  = os.environ.get("YOUTUBE_API_KEY", "")
+YOUTUBE_API_KEY  = os.environ.get("YOUTUBE_API_KEY", "AIzaSyCGfwA660Ba65cheWLn8ybj7eIbA4xhPQ0")
 
 REQUIRED_CHANNEL_USERNAME = os.environ.get("REQUIRED_CHANNEL_USERNAME", "@log_ak_bots")
 REQUIRED_CHANNEL_URL      = os.environ.get("REQUIRED_CHANNEL_URL", "https://t.me/log_ak_bots")
