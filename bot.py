@@ -15,8 +15,8 @@ from urllib.parse import urlparse
 import aiohttp
 
 try:
-    from pyrogram import Client as PyroClient
-    from pyrogram.errors import FloodWait, RPCError
+    from pyrofork import Client as PyroClient
+    from pyrofork.errors import FloodWait, RPCError
     PYROGRAM_AVAILABLE = True
 except ImportError:
     PYROGRAM_AVAILABLE = False
