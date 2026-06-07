@@ -2,6 +2,7 @@
 aiohttp>=3.9.0
 httpx>=0.27.0
 requests==2.32.3
+websockets>=13.0,<15.0
 
 # Pyrogram — 2GB upload ke liye (MTProto)
 pyrofork==2.3.45
@@ -26,6 +27,8 @@ brotli
 websockets
 curl-cffi
 certifi
+yt-dlp
 
 # Environment
 python-dotenv==1.0.1
+gunicorn
